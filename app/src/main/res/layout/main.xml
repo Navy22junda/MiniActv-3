@@ -55,6 +55,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Boton4" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoLink="web"
+            android:text="@string/udlpage" />
     </LinearLayout>
 
     <LinearLayout
@@ -73,7 +81,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Boton5" />
-        
+
+        <Button
+            android:id="@+id/buttonMarcar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/BotonMarcar" />
+
     </LinearLayout>
 
     <Button
@@ -81,5 +95,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Boton6" />
+
+    <Button
+        android:id="@+id/buttonsms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/BotonSms"/>
+    <Button
+        android:id="@+id/buttonemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonEmail"/>
+    <Button
+        android:id="@+id/buttonGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gallery"/>
 
 </LinearLayout>

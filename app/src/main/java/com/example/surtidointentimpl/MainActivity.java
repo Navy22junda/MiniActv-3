@@ -11,6 +11,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import androidx.core.app.ActivityCompat;
+
+import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,6 +33,10 @@ public class MainActivity extends Activity implements OnClickListener{
 	    Button btn4 = findViewById(R.id.button4);
 	    Button btn5 = findViewById(R.id.button5);
 	    Button btn6 = findViewById(R.id.button6);
+	    Button btnMarcar = findViewById(R.id.buttonMarcar);
+	    Button btnSms = findViewById(R.id.buttonsms);
+	    Button btEmail = findViewById(R.id.buttonemail);
+	    Button btGallery = findViewById(R.id.buttonGallery);
 
 	    btn1.setOnClickListener(this);
 	    btn2.setOnClickListener(this);
@@ -38,6 +44,10 @@ public class MainActivity extends Activity implements OnClickListener{
 	    btn4.setOnClickListener(this);
 	    btn5.setOnClickListener(this);
 	    btn6.setOnClickListener(this);
+	    btnMarcar.setOnClickListener(this);
+	    btnSms.setOnClickListener(this);
+	    btEmail.setOnClickListener(this);
+	    btGallery.setOnClickListener(this);
 
 		if (Build.VERSION.SDK_INT >= 23)
 			if (! ckeckPermissions())
@@ -80,8 +90,20 @@ public class MainActivity extends Activity implements OnClickListener{
 			case R.id.button5:
                 callPhone();
 				break;
+			case R.id.buttonMarcar:
+				dialNumber();
+				break;
 			case R.id.button6:
 				accessContacts();
+				break;
+			case R.id.buttonsms:
+				sendSms();
+				break;
+			case R.id.buttonemail:
+				sendEmail();
+				break;
+			case R.id.buttonGallery:
+				enterGallery();
 				break;
 			}
 	}
@@ -156,6 +178,23 @@ public class MainActivity extends Activity implements OnClickListener{
 		startActivity(in);
 	}
 
+	private void dialNumber(){
+		Intent in;
+
+		if (Build.VERSION.SDK_INT >= 23) {
+			if (ckeckPermissionsCallPhone()) {
+				Toast.makeText(this, getString(R.string.opcioMarcar), Toast.LENGTH_LONG).show();
+				in = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + getText(R.string.telef)));
+				startActivity(in);
+			} else {
+				requestPermissionsCallPhone();
+			}
+		}else {
+			Toast.makeText(this, getString(R.string.opcioMarcar), Toast.LENGTH_LONG).show();
+			in = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + getText(R.string.telef)));
+			startActivity(in);
+		}
+	}
 
 	private void callPhone() {
 		Intent in;
@@ -168,12 +207,42 @@ public class MainActivity extends Activity implements OnClickListener{
 		} else {
 			    requestPermissionsCallPhone();
 		}
-		}
-		else {
+		} else {
 			Toast.makeText(this, getString(R.string.opcion5), Toast.LENGTH_LONG).show();
 			in = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + getText(R.string.telef)));
 			startActivity(in);
 		}
+	}
+
+	private void sendSms(){
+		Intent in;
+
+		Toast.makeText(this, getString(R.string.opcionSms), Toast.LENGTH_LONG).show();
+		in = new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", String.valueOf(getText(R.string.telef)), null));
+		in.putExtra("sms_body", "Buenas tardes Amigo");
+		startActivity(in);
+	}
+
+	private void sendEmail(){
+		Intent in;
+
+		Toast.makeText(this, getString(R.string.opcionEmail), Toast.LENGTH_LONG).show();
+		in = new Intent(Intent.ACTION_SEND);
+		in.setType("text/plain");
+		in.putExtra(Intent.EXTRA_EMAIL, new String[] { "palomitas88tucasa@gmail.com"});
+		in.putExtra(Intent.EXTRA_SUBJECT, "Informacion de la situacion Médica del país");
+		in.putExtra(Intent.EXTRA_TEXT, "La cosa no va bien");
+
+		startActivity(in);
+	}
+
+	private void enterGallery(){
+		Intent in;
+
+		Toast.makeText(this, getString(R.string.opcionGallery), Toast.LENGTH_LONG).show();
+		in = new Intent(Intent.ACTION_VIEW, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+		startActivity(in);
 	}
 
 

@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/navy/Desktop/MiniActv-3/app/build/intermediates/res/merged/debug/drawable-mdpi_tulips.jpg.flat",
+        "source": "/Users/navy/Desktop/MiniActv-3/app/src/main/res/drawable-mdpi/tulips.jpg"
+    },
+    {
+        "merged": "/Users/navy/Desktop/MiniActv-3/app/build/intermediates/res/merged/debug/drawable-xhdpi_tulips.jpg.flat",
+        "source": "/Users/navy/Desktop/MiniActv-3/app/src/main/res/drawable-xhdpi/tulips.jpg"
+    },
+    {
+        "merged": "/Users/navy/Desktop/MiniActv-3/app/build/intermediates/res/merged/debug/drawable-hdpi_tulips.jpg.flat",
+        "source": "/Users/navy/Desktop/MiniActv-3/app/src/main/res/drawable-hdpi/tulips.jpg"
+    },
+    {
+        "merged": "/Users/navy/Desktop/MiniActv-3/app/build/intermediates/res/merged/debug/menu_main.xml.flat",
+        "source": "/Users/navy/Desktop/MiniActv-3/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/Users/navy/Desktop/MiniActv-3/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_launcher.png.flat",
+        "source": "/Users/navy/Desktop/MiniActv-3/app/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/navy/Desktop/MiniActv-3/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher.png.flat",
+        "source": "/Users/navy/Desktop/MiniActv-3/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/navy/Desktop/MiniActv-3/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/navy/Desktop/MiniActv-3/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/navy/Desktop/MiniActv-3/app/build/intermediates/res/merged/debug/layout_main.xml.flat",
+        "source": "/Users/navy/Desktop/MiniActv-3/app/src/main/res/layout/main.xml"
+    },
+    {
+        "merged": "/Users/navy/Desktop/MiniActv-3/app/build/intermediates/res/merged/debug/drawable-ldpi_tulips.jpg.flat",
+        "source": "/Users/navy/Desktop/MiniActv-3/app/src/main/res/drawable-ldpi/tulips.jpg"
+    }
+]

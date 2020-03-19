@@ -14,6 +14,7 @@
     <string name="Boton5">Llamar</string>
     <string name="Boton6">Acceder Contactos</string>
     <string name="telef">666666666</string>
+    <string name="BotonMarcar">Marcar</string>
 
     <string name="lat">41.60788</string>
     <string name="lon">0.623333</string>
@@ -27,6 +28,16 @@
     <string name="opcion4">Buscando en Google</string>
     <string name="opcion5">Llamando al Tlfn.</string>
     <string name="opcion6">Accediendo a contactos</string>
+    <string name="opcioMarcar">Marcando el telefono</string>
+    <string name="opcionSms">Enviar sms</string>
+    <string name="opcionEmail">Enviar email</string>
+    <string name="opcionGallery">Entrando Galleria</string>
+
+
+    <string name="udlpage">http://www.udl.cat</string>
+    <string name="BotonSms">Enviar un SMS con Buenas Tardes</string>
+    <string name="buttonEmail">Enviar email a palomitas88tucasa@gmail.com</string>
+    <string name="gallery">Acceder Galería imágenes</string>
 
 
 </resources>
