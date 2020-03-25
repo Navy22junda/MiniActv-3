@@ -105,6 +105,7 @@ id fill_vertical
 id forever
 id icon
 id icon_group
+id imageView3
 id info
 id italic
 id left

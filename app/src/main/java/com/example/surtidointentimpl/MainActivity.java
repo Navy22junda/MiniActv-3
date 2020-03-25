@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener{
@@ -240,9 +241,20 @@ public class MainActivity extends Activity implements OnClickListener{
 		Intent in;
 
 		Toast.makeText(this, getString(R.string.opcionGallery), Toast.LENGTH_LONG).show();
-		in = new Intent(Intent.ACTION_VIEW, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+		in = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 
-		startActivity(in);
+		startActivityForResult(in, 1);
+	}
+
+	public void onActivityResult(int requestCode, int resultCode, Intent data){
+
+		if(resultCode == RESULT_OK){
+			if(requestCode == 1){
+				Uri selectedImage = data.getData();
+				ImageView imageGallery = findViewById(R.id.imageView3);
+				imageGallery.setImageURI(selectedImage);
+			}
+		}
 	}
 
 

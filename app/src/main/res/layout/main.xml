@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -106,10 +107,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonEmail"/>
-    <Button
-        android:id="@+id/buttonGallery"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/gallery"/>
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/buttonGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gallery"/>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="126dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/divider_horizontal_bright" />
+    </LinearLayout>
 
 </LinearLayout>
